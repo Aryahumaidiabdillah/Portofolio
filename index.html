@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arya Humaidi Abdillah — Portfolio</title>
+<meta name="description" content="Portfolio Arya Humaidi Abdillah — Mahasiswa Pascasarjana PAI, santri, Islamic Studies, education, research, dan digital learning.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--paper:#f5f1e8;--paper2:#fbfaf6;--ink:#20231f;--muted:#6e716b;--green:#1e5945;--green2:#123e31;--wood:#876c4d;--gold:#b99458;--line:#ddd5c7;--white:#fffdf8;--shadow:0 20px 55px rgba(48,42,31,.11)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:auto}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(245,241,232,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Playfair Display",serif;font-weight:700;font-size:1.25rem;letter-spacing:-.03em}.logo span{color:var(--green)}
+.navlinks{display:flex;gap:25px;color:var(--muted);font-size:.86rem}.navlinks a:hover{color:var(--green)}
+.menu{display:none;border:0;background:none;font-size:1.5rem}
+.hero{min-height:100vh;padding:125px 0 80px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero:after{content:"بِسْمِ اللّٰهِ";position:absolute;right:-30px;bottom:30px;font-family:Amiri,serif;font-size:7rem;color:#1e594508;pointer-events:none}
+.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:75px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid #cfc5b3;border-radius:99px;color:var(--green);font-size:.74rem;font-weight:800;letter-spacing:.06em;background:#fbf8f0;margin-bottom:22px}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+h1,h2,h3{font-family:"Playfair Display",serif}
+h1{font-size:clamp(3.2rem,7vw,6.3rem);line-height:.94;letter-spacing:-.065em;margin-bottom:25px}h1 span{color:var(--green)}
+.heroText{font-size:1.06rem;color:var(--muted);max-width:650px}.quote{font-family:Amiri,serif;font-size:1.35rem;color:var(--wood);margin-top:20px}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 18px;border-radius:12px;border:1px solid #cfc8bb;font-size:.88rem;font-weight:750;background:var(--white)}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}.btn:hover{transform:translateY(-2px)}
+.portrait{max-width:430px;margin:auto;position:relative}.portrait:before{content:"";position:absolute;inset:17px -17px -17px 17px;border:1px solid var(--gold);border-radius:28px}.portraitCard{position:relative;background:var(--white);padding:10px;border-radius:28px;box-shadow:var(--shadow)}.portraitCard img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px}.portraitInfo{display:flex;justify-content:space-between;padding:12px 5px 3px;font-size:.78rem}.portraitInfo span{color:var(--muted)}
+section{padding:105px 0}.sectionTop{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}.label{color:var(--green);font-size:.7rem;font-weight:850;letter-spacing:.15em;text-transform:uppercase}.sectionTop h2{font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.04;letter-spacing:-.045em;margin-top:7px}.sectionTop p{max-width:460px;color:var(--muted)}
+.aboutGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.aboutMain,.identityCard{background:var(--white);border:1px solid var(--line);border-radius:23px;padding:30px}.aboutMain p{color:var(--muted);font-size:1rem}.identityGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.identity{padding:17px;border:1px solid var(--line);border-radius:15px}.identity strong{display:block;color:var(--green);margin-bottom:3px}.identity small{color:var(--muted);font-size:.74rem}
+.identityCard{background:var(--green);color:white;border-color:var(--green)}.identityCard p{color:#d5e0da}.identityCard h3{font-size:1.7rem;margin:9px 0 13px}.miniList{display:grid;gap:10px;margin-top:20px}.mini{padding:13px 14px;border:1px solid #ffffff2a;border-radius:13px}.mini b{display:block}.mini span{font-size:.78rem;color:#c9d8d0}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:24px;min-height:210px}.skillIcon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#e9f0eb;color:var(--green);font-weight:900;margin-bottom:17px}.skill h3{font-size:1.15rem;margin-bottom:12px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:.72rem;padding:5px 8px;border-radius:99px;background:#f2eee5;border:1px solid #e3dccf;color:#5d625c}
+.knowledge{background:#e9e2d5}.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.book{background:var(--white);border:1px solid var(--line);border-radius:19px;padding:26px;position:relative;overflow:hidden}.book:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--green)}.book:nth-child(2):before{background:var(--wood)}.book:nth-child(3):before{background:var(--gold)}.bookIcon{font-size:1.8rem}.book h3{font-size:1.25rem;margin:10px 0 8px}.book p{color:var(--muted);font-size:.88rem}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:var(--white);border:1px solid var(--line);border-radius:21px;padding:26px;min-height:270px;display:flex;flex-direction:column}.projectNum{font-size:.7rem;font-weight:900;color:var(--gold);letter-spacing:.13em}.project h3{font-size:1.35rem;line-height:1.25;margin:12px 0 9px}.project p{color:var(--muted);font-size:.88rem}.projectFoot{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;align-items:center;color:var(--green);font-size:.77rem;font-weight:800}.arrow{font-size:1.1rem}
+.teaching{background:var(--green);color:white}.teaching .label{color:#d6bc83}.teaching .sectionTop p{color:#cbd8d1}.teachingGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.teach{background:#ffffff0c;border:1px solid #ffffff25;border-radius:20px;padding:25px}.teach h3{font-size:1.3rem;margin-bottom:8px}.teach p{color:#cbd8d1;font-size:.9rem}
+.experienceCard{margin-top:17px;background:var(--white);color:var(--ink);border-radius:22px;padding:27px;border:1px solid var(--line)}.experienceCard .meta{color:var(--green);font-size:.72rem;font-weight:850;text-transform:uppercase;letter-spacing:.07em}.experienceCard h3{font-size:1.45rem;margin:6px 0 0}.experienceCard .place{color:var(--muted);font-weight:700}.experienceCard p,.experienceCard li{color:var(--muted);font-size:.9rem}.experienceCard ul{margin:13px 0 0 19px}
+.writingGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.writing{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:26px}.writing small{color:var(--green);font-weight:800}.writing h3{font-size:1.3rem;margin:7px 0}.writing p{color:var(--muted);font-size:.87rem}.read{display:inline-block;margin-top:16px;color:var(--green);font-weight:800;font-size:.8rem}
+.santri{background:#f0eadf}.santriBox{background:var(--white);border:1px solid var(--line);border-radius:27px;padding:42px;text-align:center}.arabic{font-family:Amiri,serif;font-size:2rem;color:var(--green);margin-bottom:13px}.santriBox p{max-width:750px;margin:auto;color:var(--muted)}.flow{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px}.flow span{padding:9px 13px;border:1px solid var(--line);border-radius:99px;font-size:.78rem;font-weight:800}.flow b{color:var(--gold)}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:14px}.timelineItem{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}.year{color:var(--gold);font-weight:900;font-size:.8rem}.timelineItem h3{font-size:1.15rem;margin:5px 0}.timelineItem p{color:var(--muted);font-size:.82rem}
+.contact{background:var(--ink);color:white}.contactGrid{display:grid;grid-template-columns:1fr .9fr;gap:55px}.contact .label{color:#d6bc83}.contact h2{font-size:clamp(2.5rem,5vw,4.2rem);line-height:1.03;margin:8px 0 15px}.contactText{color:#c5cec9;max-width:570px}.contacts{display:grid;gap:11px}.contactItem{border:1px solid #ffffff25;border-radius:15px;padding:15px 18px}.contactItem small{display:block;color:#9eaca4;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}.contactItem strong{font-size:.9rem}
+footer{padding:25px;text-align:center;color:var(--muted);font-size:.76rem;border-top:1px solid var(--line)}
+@media(max-width:900px){.heroGrid,.aboutGrid,.contactGrid{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.projects,.shelf{grid-template-columns:1fr}.portrait{max-width:360px}.sectionTop{display:block}.sectionTop p{margin-top:12px}.teachingGrid{grid-template-columns:1fr}}
+@media(max-width:650px){.navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:var(--paper);padding:16px 4%;flex-direction:column;gap:11px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.skills,.identityGrid,.writingGrid,.timeline{grid-template-columns:1fr}section{padding:75px 0}h1{font-size:3.35rem}.santriBox{padding:28px}.hero:after{font-size:4rem}.eduBadge{margin-top:15px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><a href="#home" class="logo">ARYA <span>HUMAIDI.</span></a><button class="menu" aria-label="Menu">☰</button><div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#knowledge">Knowledge</a><a href="#projects">Projects</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a></div></div></nav>
+
+<section class="hero" id="home"><div class="container heroGrid">
+<div>
+<div class="eyebrow"><i></i> Pascasarjana PAI × Santri</div>
+<h1>Belajar dari <span>turats,</span><br>tumbuh bersama akademik.</h1>
+<p class="heroText">Arya Humaidi Abdillah — mahasiswa Pascasarjana Pendidikan Agama Islam, santri, dan Islamic Education enthusiast yang tertarik pada kajian keislaman, penelitian, pengajaran, serta media pembelajaran digital.</p>
+<div class="quote">“Belajar dari khazanah keislaman, berkembang bersama ilmu pengetahuan.”</div>
+<div class="actions"><a class="btn primary" href="#projects">Lihat Portofolio →</a><a class="btn" href="#about">Tentang Saya</a></div>
+</div>
+<div class="portrait"><div class="portraitCard"><img src="arya-profile.png" alt="Foto Arya Humaidi Abdillah"><div class="portraitInfo"><strong>Arya Humaidi Abdillah</strong><span>PAI · Santri</span></div></div></div>
+</div></section>
+
+<section id="about"><div class="container"><div class="sectionTop"><div><div class="label">01 — About Me</div><h2>Di antara pesantren<br>& akademik.</h2></div><p>Identitas yang mempertemukan tradisi keilmuan pesantren dengan kebutuhan pendidikan dan akademik modern.</p></div>
+<div class="aboutGrid"><div class="aboutMain"><p>Saya adalah mahasiswa <strong>Pascasarjana Pendidikan Agama Islam</strong> yang juga tumbuh dalam lingkungan pesantren. Ketertarikan saya berada pada pendidikan Islam, kajian keislaman, penelitian pendidikan, serta bagaimana khazanah keilmuan Islam dapat berdialog dengan perkembangan ilmu pengetahuan dan teknologi.</p><div class="identityGrid"><div class="identity"><strong>🎓 Academic</strong><small>Pascasarjana PAI · Research · Islamic Education · Academic Writing</small></div><div class="identity"><strong>🕌 Santri</strong><small>Kajian Kitab · Al-Qur'an & Hadis · Fikih · Tradisi Keilmuan</small></div></div></div>
+<div class="identityCard"><div class="label">Personal Direction</div><h3>Turats sebagai akar, akademik sebagai ruang berkembang.</h3><p>Portofolio ini menjadi ruang untuk mendokumentasikan proses belajar, mengajar, meneliti, dan berkarya.</p><div class="miniList"><div class="mini"><b>Study</b><span>Islamic Studies & Education</span></div><div class="mini"><b>Practice</b><span>Teaching & Digital Learning</span></div><div class="mini"><b>Research</b><span>Academic Writing & Critical Thinking</span></div></div></div></div></div></section>
+
+<section id="skills"><div class="container"><div class="sectionTop"><div><div class="label">02 — Skills</div><h2>Ilmu yang<br>saya kembangkan.</h2></div><p>Kompetensi keislaman, akademik, pendidikan, dan digital dalam satu ekosistem.</p></div>
+<div class="skills">
+<div class="skill"><div class="skillIcon">IS</div><h3>Islamic Studies</h3><div class="tags"><span class="tag">Al-Qur'an Hadis</span><span class="tag">Fikih</span><span class="tag">Akidah Akhlak</span></div></div>
+<div class="skill"><div class="skillIcon">AC</div><h3>Academic</h3><div class="tags"><span class="tag">Research</span><span class="tag">Academic Writing</span><span class="tag">Critical Thinking</span></div></div>
+<div class="skill"><div class="skillIcon">ED</div><h3>Education</h3><div class="tags"><span class="tag">Teaching</span><span class="tag">Curriculum</span><span class="tag">Assessment</span></div></div>
+<div class="skill"><div class="skillIcon">DG</div><h3>Digital</h3><div class="tags"><span class="tag">PowerPoint</span><span class="tag">Canva</span><span class="tag">CapCut</span><span class="tag">Mendeley</span><span class="tag">AI Tools</span></div></div>
+</div></div></section>
+
+<section class="knowledge" id="knowledge"><div class="container"><div class="sectionTop"><div><div class="label">03 — Kitab & Knowledge</div><h2>Rak kecil untuk<br>khazanah ilmu.</h2></div><p>Kajian Al-Qur'an, Hadis, dan khazanah kitab kuning yang menjadi bagian dari perjalanan keilmuan.</p></div>
+<div class="shelf"><article class="book"><div class="bookIcon">📖</div><h3>Al-Qur'an & Tafsir</h3><p>Kajian dan pemahaman ayat-ayat Al-Qur'an dalam perspektif pendidikan dan kehidupan.</p></article><article class="book"><div class="bookIcon">📜</div><h3>Hadis</h3><p>Studi hadis dan relevansinya dengan pendidikan Islam serta pembentukan nilai peserta didik.</p></article><article class="book"><div class="bookIcon">📚</div><h3>Turats / Kitab Kuning</h3><p>Eksplorasi khazanah keilmuan klasik dan dialognya dengan konteks pendidikan modern.</p></article></div></div></section>
+
+<section id="projects"><div class="container"><div class="sectionTop"><div><div class="label">04 — Research & Academic Projects</div><h2>Belajar yang<br>menjadi karya.</h2></div><p>Dokumentasi proyek akademik, bahan ajar, penelitian, dan karya pendidikan yang telah dikerjakan.</p></div>
+<div class="projects">
+<article class="project"><div class="projectNum">PROJECT 01</div><h3>Integrasi Sains dalam Pembelajaran Al-Qur'an dan Hadis</h3><p>Bahan ajar presentasi tentang hubungan ilmu pengetahuan dengan pembelajaran Al-Qur'an dan Hadis dalam konteks PAI.</p><div class="projectFoot"><span>Academic · Teaching Material</span><span class="arrow">→</span></div></article>
+<article class="project"><div class="projectNum">PROJECT 02</div><h3>Pengembangan Bahan Ajar PAI</h3><p>Eksplorasi presentasi dan media pembelajaran digital untuk membuat materi PAI lebih terstruktur dan komunikatif.</p><div class="projectFoot"><span>Education · Digital</span><span class="arrow">→</span></div></article>
+<article class="project"><div class="projectNum">PROJECT 03</div><h3>Kajian Islamic Studies</h3><div class="projectFoot"><span>Research · Writing</span><span class="arrow">→</span></div></article>
+</div></div></section>
+
+<section class="teaching" id="teaching"><div class="container"><div class="sectionTop"><div><div class="label">05 — Teaching Portfolio</div><h2>Ilmu yang<br>dipraktikkan.</h2></div><p>Pengalaman mengajar menjadi ruang untuk menerapkan ilmu dan belajar memahami kebutuhan peserta didik.</p></div>
+<div class="teachingGrid"><div class="teach"><h3>📚 PAI & Islamic Studies</h3><p>Pembelajaran Al-Qur'an, Hadis, Fikih, Akidah Akhlak, dan kajian keislaman sesuai kebutuhan peserta didik.</p></div><div class="teach"><h3>💻 Digital Learning</h3><p>Pengembangan bahan ajar berbasis presentasi dan media digital menggunakan PowerPoint, Canva, CapCut, serta AI Tools.</p></div></div>
+<div class="experienceCard"><div class="meta">Teaching Experience · 1 Bulan</div><h3>Guru Al-Qur'an Hadis</h3><div class="place">MA Al-Mahrusiyyah</div><p>Mengajar mata pelajaran Al-Qur'an Hadis pada tingkat Madrasah Aliyah dengan fokus pada penyampaian materi keislaman, pengelolaan pembelajaran, dan pembimbingan peserta didik.</p><ul><li>Menyampaikan materi Al-Qur'an Hadis dan menyiapkan bahan ajar.</li><li>Mengelola kegiatan pembelajaran dan menggunakan metode/media yang sesuai.</li><li>Membimbing peserta didik memahami kandungan ayat dan hadis.</li><li>Melakukan evaluasi terhadap pemahaman peserta didik.</li></ul></div>
+</div></section>
+
+<section><div class="container"><div class="sectionTop"><div><div class="label">06 — Writings</div><h2>Catatan &<br>tulisan akademik.</h2></div><p>Tulisan dan karya akademik yang berkaitan dengan Pendidikan Agama Islam, kajian keislaman, dan pendidikan.</p></div>
+<div class="writingGrid"><article class="writing"><small>ACADEMIC PAPER · 2026</small><h3>Integrasi Sains dalam Pembelajaran Al-Qur'an dan Hadis</h3><p>Materi akademik yang mengeksplorasi integrasi sains dalam pembelajaran Al-Qur'an dan Hadis.</p><a class="read" href="#projects">Lihat Project →</a></article><article class="writing"><small>COMING SOON</small><h3>Publikasi & tulisan lainnya</h3><p>Kumpulan tulisan dan karya akademik dalam bidang Pendidikan Agama Islam dan kajian keislaman.</p><span class="read">Lihat tulisan →</span></article></div></div></section>
+
+<section class="santri"><div class="container"><div class="santriBox"><div class="label">07 — Life as a Santri</div><div class="arabic">الْمُحَافَظَةُ عَلَى الْقَدِيمِ الصَّالِحِ وَالْأَخْذُ بِالْجَدِيدِ الْأَصْلَحِ</div><p>“Memelihara tradisi lama yang baik dan mengambil hal baru yang lebih baik.” Sebuah prinsip untuk mempertemukan khazanah klasik dengan kebutuhan pendidikan kontemporer.</p><div class="flow"><span>Ngaji</span><b>→</b><span>Research</span><b>→</b><span>Teaching</span><b>→</b><span>Reflection</span></div></div></div></section>
+
+<section><div class="container"><div class="sectionTop"><div><div class="label">08 — Education & Certificates</div><h2>Perjalanan<br>akademik.</h2></div><p>Perjalanan pendidikan dan pengembangan kompetensi dalam bidang Pendidikan Agama Islam.</p></div>
+<div class="timeline"><div class="timelineItem"><div class="year">PASCASARJANA</div><h3>Pendidikan Agama Islam</h3><p>Program Pascasarjana — Universitas Islam Tribakti Lirboyo Kediri.</p></div><div class="timelineItem"><div class="year">EXPERIENCE</div><h3>Guru Al-Qur'an Hadis</h3><p>MA Al-Mahrusiyyah — pengalaman mengajar selama 1 bulan.</p></div><div class="timelineItem"><div class="year">ACADEMIC</div><h3>Research & Academic Writing</h3><p>Pengembangan kompetensi penelitian, penulisan akademik, dan critical thinking.</p></div><div class="timelineItem"><div class="year">DIGITAL</div><h3>Media & Learning Tools</h3><p>PowerPoint, Canva, CapCut, Mendeley, dan AI Tools.</p></div></div></div></section>
+
+<section class="contact" id="contact"><div class="container contactGrid"><div><div class="label">09 — Contact</div><h2>Mari terhubung<br>dalam dunia ilmu.</h2></div><div class="contacts"><div class="contactItem"><small>Email</small><strong>Email profesional</strong></div><div class="contactItem"><small>WhatsApp</small><strong>WhatsApp</strong></div><div class="contactItem"><small>Instagram / LinkedIn</small><strong>Instagram / LinkedIn</strong></div></div></div></section>
+<footer>© 2026 Arya Humaidi Abdillah · Between Turats & Academia</footer>
+<script>
+const menu=document.querySelector('.menu'),links=document.querySelector('.navlinks');menu.onclick=()=>links.classList.toggle('open');document.querySelectorAll('.navlinks a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+</script>
+</body>
+</html>
